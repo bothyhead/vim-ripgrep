@@ -48,6 +48,8 @@ endfun
 fun! s:RgSearchTerm(txt)
   if empty(a:txt)
     return expand("<cword>")
+  elseif a:txt == '-tdelphi '
+    return a:txt . expand("<cword>")
   else
     return a:txt
   endif
